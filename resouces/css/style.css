@@ -1,5 +1,3 @@
-
-
 body {
   background-color: rgb(29,29,29);
   font-size: 16;
@@ -18,9 +16,14 @@ hr {
 }
 
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* Coming Soon Page */
@@ -47,13 +50,18 @@ hr {
 
 /* header */
 
-
 header .desktop-nav{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: black;
   height: 5rem;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   width: 100%;
   z-index: 5;
@@ -61,29 +69,42 @@ header .desktop-nav{
 
 .desktop-nav h1 {
   display: block;
+  margin-left: 32px;
   margin-left: 2rem;
   font-family: 'Fredericka the Great', sans-serif;
   color: white;
+  font-size: 48px;
   font-size: 3rem;
 }
 
 .desktop-nav h1:hover {
   color: #EAD729;
-  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .desktop-nav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 32px;
   margin-right: 2rem;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .desktop-nav span {
   color: white;
+  padding: 16px;
   padding: 1rem;
+  font-size: 12px;
   font-size: .75rem;
   text-transform: uppercase;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
 }
 
@@ -93,17 +114,21 @@ header .desktop-nav{
 a.nav-link {
   color: white;
   text-decoration: none;
+  padding-bottom: 8px;
   padding-bottom: .5rem;
 }
 
 a.nav-link:hover {
   color: #EAD729;
-  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
   border-bottom: 1px solid white;
 }
 
 /* Moblie Header Section */
-
+.mobile-nav {
+  display: none;
+}
 /*
 @media only screen and (max-width: 768px) {
   .desktop-nav {
@@ -134,17 +159,21 @@ a.nav-link:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 1040px;
   height: 65rem;
-  margin-top: 2rem;
+  /* margin-top: 32px; */
 }
 
 .main_banner .info {
   width: auto;
+  padding: 32px 48px;
   padding: 2rem 3rem;
   position: relative;
+  top: 256px;
   top: 16rem;
   font-family: 'Fredericka the Great', sans-serif;
   text-align: center;
+  font-size: 96px;
   font-size: 6rem;
   color: white;
   position: relative;
@@ -163,31 +192,39 @@ a.nav-link:hover {
 
 
 .title hr {
+  margin: 32px 0;
   margin: 2rem 0;
 }
 
 .title h1 {
   font-family: 'Fredericka the Great', sans-serif;
   color: white;
+  font-size: 64px;
   font-size: 4rem;
   text-align: center;
+  margin-top: 16px;
   margin-top: 1rem;
   text-decoration: underline;
 }
 
 .title h1:hover {
   color: #EAD729;
-  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .title p {
   color: white;
+  padding: 16px;
   padding: 1rem;
+  font-size: 12px;
   font-size: .75rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 2;
+  margin: 0px 80px;
   margin: 0rem 5rem;
 }
 
@@ -196,24 +233,40 @@ a.nav-link:hover {
 
 
 .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 0px;
   margin-top: 0rem;
+  margin: 0px 48px;
   margin: 0rem 3rem;
 }
 
 .gallery img {
-  flex-grow: 1;
-  flex-basis: 4.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 72px;
+      flex-basis: 72px;
+  -ms-flex-preferred-size: 4.5rem;
+      flex-basis: 4.5rem;
+  max-width: 192px;
   max-width: 12rem;
+  margin: 16px 0px;
   margin: 1rem 0rem;
+  -webkit-transition: 300ms ease-out 200ms;
   transition: 300ms ease-out 200ms;
 }
 
 .gallery img:hover {
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.2);
 }
 
 .item {
@@ -224,26 +277,38 @@ a.nav-link:hover {
 /* About Section */
 
 .wrapper-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  margin-right: 96px;
   margin-right: 6rem;
+  margin-left: 160px;
   margin-left: 10rem;
   /* background-image: url("../images/Wooden_background.jpg"); */
   background-color: #663300;
   border-radius: 1rem;
+  border: 1.6px solid white;
   border: .1rem solid white;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 32px;
   margin-top: 2rem;
 }
 
 .about hr {
+  margin: 32px 0;
   margin: 2rem 0;
 }
 
 .about h4 {
   display: block;
   color: white;
+  padding: 16px;
   padding: 1rem;
+  font-size: 12px;
   font-size: .75rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   text-align: center;
   text-transform: uppercase;
@@ -253,20 +318,25 @@ a.nav-link:hover {
 .about h1 {
   font-family: 'Fredericka the Great', sans-serif;
   color: white;
+  font-size: 64px;
   font-size: 4rem;
   text-align: center;
+  margin-top: 16px;
   margin-top: 1rem;
   text-decoration: underline;
 }
 
 .about h1:hover {
   color: #EAD729;
-  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .about img {
   display: block;
+  border-top-left-radius: 16px;
   border-top-left-radius: 1rem;
+  border-bottom-left-radius: 16px;
   border-bottom-left-radius: 1rem;
 }
 
@@ -274,8 +344,10 @@ a.nav-link:hover {
   display: block;
   color: white;
   font-family: 'Fredericka the Great', sans-serif;
+  font-size: 48px;
   font-size: 3rem;
   text-align: center;
+  margin-top: 16px;
   margin-top: 1rem;
   text-decoration: underline;
 }
@@ -283,23 +355,30 @@ a.nav-link:hover {
 .about-content h6 {
   color: #EAD729;
   font-family: 'Fredericka the Great', sans-serif;
+  font-size: 30.4px;
   font-size: 1.9rem;
   /* text-decoration: underline; */
-  transform: rotate(90);
+  -webkit-transform: rotate(90);
+          transform: rotate(90);
   text-align: right;
+  margin-right: 32px;
   margin-right: 2rem;
 }
 
 .about-content h3:hover {
   color: #EAD729;
-  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .about-content p {
   display: block;
   color: white;
+  padding: 16px;
   padding: 1rem;
+  font-size: 12px;
   font-size: .75rem;
+  letter-spacing: 1.6px;
   letter-spacing: .1rem;
   text-align: center;
   text-transform: uppercase;
@@ -311,50 +390,78 @@ a.nav-link:hover {
 
 .flex-container.locations {
   margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 32px;
   margin-left: 2rem;
+  margin-right: 32px;
   margin-right: 2rem;
 }
 
 .store {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #101010	;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* flex-basis: 280px; */
   /* justify-content: center; */
-  flex-direction: center;
+  -ms-flex-direction: center;
+      flex-direction: center;
   color: white;
   border-radius: 1rem;
   text-align: center;
+  height: 288px;
   height: 18rem;
+  width: 320px;
   width: 20rem;
 }
 
 .store .phone-number a {
   display: block;
+  padding: 3.2px;
   padding: .2rem;
   color: white;
+  font-size: 14.4px;
   font-size: .90rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: 2;
+  margin-bottom: 24px;
   margin-bottom: 1.5rem;
+  margin-top: 24px;
   margin-top: 1.5rem;
   text-decoration: none;
 }
 
 .store h2 {
   display: block;
+  padding: 3.2px;
   padding: .2rem;
   color: white;
+  font-size: 14.4px;
   font-size: .9rem;
   font-weight: 700;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: 2;
+  margin-bottom: 16px;
   margin-bottom: 1rem;
+  margin-top: 12px;
   margin-top: .75rem;
 
 }
@@ -365,10 +472,14 @@ a.nav-link:hover {
 }
 
 .store .first-box a {
+  margin-top: 24px;
   margin-top: 1.5rem;
+  padding: 8px;
   padding: .5rem;
   color: black;
+  font-size: 14.4px;
   font-size: .90rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: 2;
   background-color: white;
@@ -381,10 +492,17 @@ a.nav-link:hover {
 }
 
 .store .mini {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
+  margin-top: 16px;
   margin-top: 1rem;
+  margin-bottom: 8px;
   margin-bottom: .5rem;
 }
 
@@ -406,6 +524,7 @@ a.nav-link:hover {
 .sold-here .right-box p {
   display: block;
   text-align: center;
+  margin-top: 24px;
   margin-top: 1.5rem;
 }
 
@@ -413,10 +532,13 @@ a.nav-link:hover {
   display: block;
   /* padding: .2rem; */
   color: white;
+  font-size: 12.8px;
   font-size: .80rem;
   font-weight: 700;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: 2;
+  margin-left: 4.8px;
   margin-left: .3rem;
   /* margin-bottom: 1rem;
   margin-top: .75rem; */
@@ -426,7 +548,9 @@ a.nav-link:hover {
   display: block;
   /* padding: .2rem; */
   color: white;
+  font-size: 14.4px;
   font-size: .90rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: .2;
   font-weight: 300;
@@ -435,9 +559,12 @@ a.nav-link:hover {
 }
 
 .store .sold-here a {
+  padding: 3.2px;
   padding: .2rem;
   color: white;
+  font-size: 14.4px;
   font-size: .90rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: 2;
   /* margin-bottom: 1.5rem; */
@@ -447,9 +574,12 @@ a.nav-link:hover {
 
 .store .google a {
   /* margin-top: 1.5rem; */
+  padding: 8px;
   padding: .5rem;
   color: black;
+  font-size: 14.4px;
   font-size: .90rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   line-height: 5;
   background-color: white;
@@ -462,11 +592,15 @@ a.nav-link:hover {
 }
 
 .store i {
+  margin-top: 16px;
   margin-top: 1rem;
 }
 
 .store .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  margin-top: 96px;
   margin-top: 6rem;
 }
 
@@ -475,14 +609,21 @@ a.nav-link:hover {
 } */
 
 .fab:hover {
+  -webkit-transition: .2s;
   transition: .2s;
+  font-size: 64px;
   font-size: 4rem;
 }
 
 .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
-  justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 48px;
   font-size: 3rem;
 }
 
@@ -490,16 +631,21 @@ a.nav-link:hover {
 /* Footer Section */
 
 footer {
+  height: 96px;
   height: 6rem;
 }
 
 footer h1 {
   display: block;
+  margin-right: 16px;
   margin-right: 1rem;
   text-align: right;
+  margin-top: 96px;
   margin-top: 6rem;
   color: white;
+  font-size: 8px;
   font-size: .50rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   text-transform: uppercase;
   line-height: 2;
@@ -511,10 +657,20 @@ footer h1 {
 /* Coming Soon Section */
 
 .coming-soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 48px;
   margin-top: 3rem;
   background-color: rgb(29,29,29);
   font-size: 16;
@@ -522,41 +678,58 @@ footer h1 {
 }
 
 .coming-soon h6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  margin-left: 32px;
   margin-left: 2rem;
   font-family: 'Fredericka the Great', sans-serif;
   color: white;
+  font-size: 48px;
   font-size: 3rem;
 }
 
 .coming-soon p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: white;
+  padding: 48px;
   padding: 3rem;
+  font-size: 12px;
   font-size: .75rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 2;
+  margin: 0px 80px;
   margin: 0rem 5rem;
 }
 
 .return-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px solid white;
+  padding: 32px;
   padding: 2rem;
   color: white;
+  font-size: 12px;
   font-size: .75rem;
+  letter-spacing: 3.2px;
   letter-spacing: .2rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 2;
+  margin: 0px 80px;
   margin: 0rem 5rem;
   text-decoration: none;
 }
 
 .return-home:hover {
   background-color: black;
+  -webkit-transition: 200ms;
   transition: 200ms;
 }
 
